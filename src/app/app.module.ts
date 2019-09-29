@@ -6,13 +6,15 @@ import { FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TasklistComponent } from './tasklist/tasklist.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    TasklistComponent
+    TasklistComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { TasklistComponent } from './tasklist/tasklist.component';
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: 'task', component: TasklistComponent },
+      { path: 'addTask', component: AddTaskComponent},
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),

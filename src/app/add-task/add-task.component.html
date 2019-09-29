@@ -1,0 +1,110 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <form novalidate
+        #productForm="ngForm">
+    <fieldset>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label"
+                   for="projectNameId">Project:</label>
+            <div class="col-md-8">
+              <input class="form-control"
+                     id="projectNameId"
+                     type="text"
+                     placeholder="Name (required)"
+                     required
+                     minlength="3"
+                     [(ngModel)]=task.Task
+                     name="projectName"
+                     #taskNameVar="ngModel"/>
+              <span class="invalid-feedback">
+                <span *ngIf="taskNameVar.errors?.required">
+                  Project name is required.
+                </span>
+                <span *ngIf="taskNameVar.errors?.minlength">
+                  Project name must be at least three characters.
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group row">
+              <label class="col-md-2 col-form-label"
+                     for="taskNameId">Task:</label>
+              <div class="col-md-8">
+                <input class="form-control"
+                       id="taskNameId"
+                       type="text"
+                       placeholder="Task name (required)"
+                       required
+                       minlength="3"
+                       [(ngModel)]=task.Task
+                       name="productName"
+                       #taskNameVar="ngModel"/>
+                <span class="invalid-feedback">
+                  <span *ngIf="taskNameVar.errors?.required">
+                    Task name is required.
+                  </span>
+                  <span *ngIf="taskNameVar.errors?.minlength">
+                    Task name must be at least three characters.
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 col-form-label"
+                       for="productNameId">Project:</label>
+                <div class="col-md-8">
+                  <input class="form-control"
+                         id="productNameId"
+                         type="text"
+                         placeholder="Name (required)"
+                         required
+                         minlength="3"
+                         [(ngModel)]=task.Task
+                         name="productName"
+                         #taskNameVar="ngModel"/>
+                  <span class="invalid-feedback">
+                    <span *ngIf="taskNameVar.errors?.required">
+                      Product name is required.
+                    </span>
+                    <span *ngIf="taskNameVar.errors?.minlength">
+                      Task name must be at least three characters.
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-2 col-form-label"
+                         for="productNameId">Parent Task:</label>
+                  <div class="col-md-8">
+                    <input class="form-control"
+                           id="productNameId"
+                           type="text"
+                           placeholder="Name (required)"
+                           required
+                           minlength="3"
+                           [(ngModel)]=task.Task
+                           name="productName"
+                           #taskNameVar="ngModel"/>
+                    <span class="invalid-feedback">
+                      <span *ngIf="taskNameVar.errors?.required">
+                        Product name is required.
+                      </span>
+                      <span *ngIf="taskNameVar.errors?.minlength">
+                        Task name must be at least three characters.
+                      </span>
+                    </span>
+                  </div>
+                </div>
+    
+      </fieldset>
+    </form>
+  </div>
+
+  
+<div class="alert alert-danger"
+     *ngIf="errorMessage">{{errorMessage}}
+</div>
+</div>

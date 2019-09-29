@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
         <a class='navbar-brand' >{{pageTitle}}</a>
         <ul class='nav nav-pills'>
           <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
-          <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']">Add Task</a></li>
+          <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/addTask']">Add Task</a></li>
           <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/task']">View Tasks</a></li>
         </ul>
     </nav>
